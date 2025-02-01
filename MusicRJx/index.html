@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RJx-Web Player: Music for everyone</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="./assets/RJx.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="nav-top">
+        <div class="nav-data">
+            <div class="logo my-logo">
+                <img src="./assets/RJx.png" alt="">
+            </div>
+            <div class="logo three-dot">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </div>
+        <div class="player-data">
+            <div class="nav-top-play">
+                <div class="sticky-nav-icons">
+                    <img src="./assets/backward_icon.png" alt="">
+                    <img src="./assets/forward_icon.png" alt="">
+                </div>
+                <div class="sticky-nav-options">
+                    <button class="badge nav-item">Explore Premium</button>
+                    <button class="badge nav-item dark-badge"><i class="fa-regular fa-circle-down" style="margin-right:.3rem;"></i>Install App</button>
+                    <i class="fa-regular fa-user nav-item"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="main">
+        <div class="sidebar">
+            <div class="nav">
+                <div class="nav-option" style="opacity:1;">
+                    <i class="fa-solid fa-house"></i>
+                    <a href="#">Home</a>
+                </div>
+                <div class="nav-option">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <a href="#">Search</a>
+                </div>
+            </div>
+            <div class="library">
+                <div class="option">
+                    <div class="lib-option">
+                        <img src="./assets/library_icon.png" alt="">
+                        <a href="#">Your Library</a>
+                    </div>
+                    <div class="icons">
+                        <i class="fa-solid fa-plus nav-option"></i>
+                        <i class="fa-solid fa-arrow-right nav-option"></i>
+                    </div>
+                </div>
+                <div class="boxes">
+                    <div class="box">
+                        <div class="box-p1">Create your first playlist</div>
+                        <div class="box-p2">It's easy,we'll help you</div>
+                        <button class="badge">Create playlist</button>
+                    </div>
+                    <div class="box">
+                        <div class="box-p1">Let's find some podcasts to follow</div>
+                        <div class="box-p2">It's keep you updated on new episodes</div>
+                        <button class="badge">Browse poscasts</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="main-content">
+            <!-- <div class="sticky-nav">
+                <div class="sticky-nav-icons">
+                    <img src="./assets/backward_icon.png" alt="">
+                    <img src="./assets/forward_icon.png" alt="">
+                </div>
+                <div class="sticky-nav-options">
+                    <button class="badge nav-item">Explore Premium</button>
+                    <button class="badge nav-item dark-badge"><i class="fa-regular fa-circle-down" style="margin-right:.3rem;"></i>Install App</button>
+                    <i class="fa-regular fa-user nav-item"></i>
+                </div>
+            </div> -->
+            <div class="cards">
+                <h2>Recently Played</h2>
+                <div class="cards-container">
+                    <div class="card">
+                        <img src="./assets/card1img.jpeg" alt="">
+                        <p class="card-title">Top 50 - Global</p>
+                        <p class="card-info">Your daily updates of the most played tracks</p>
+                        <div class="card-player">
+                            <img src="./assets/music-player.png" alt="">
+                        </div>
+                    </div>
+                </div>
+
+
+                <h2>Trending now near you</h2>
+                <div class="cards-container">
+                    <div class="card">
+                        <img src="./assets/card2img.jpeg" alt="">
+                        <p class="card-title">Top 50 - Global</p>
+                        <p class="card-info">Your daily updates of the most played tracks</p>
+                        <div class="card-player" data-audio-src="Vaathi_Raid(128k).mp3" id="card-play-div">
+                            <img src="./assets/music-player.png" alt="">
+                            <!-- <i class="fa-solid fa-pause" id="playing-pause" onclick="musicPlayStatus()" status=""></i> -->
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="./assets/card3img.jpeg" alt="">
+                        <p class="card-title">Top 50 - Global</p>
+                        <p class="card-info">Your daily updates of the most played tracks</p>
+                        <div class="card-player" data-audio-src="Vaathi_Raid(128k).mp3" id="card-play-div">
+                            <img src="./assets/music-player.png" alt="">
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="./assets/card4img.jpeg" alt="">
+                        <p class="card-title">Top 50 - Global</p>
+                        <p class="card-info">Your daily updates of the most played tracks</p>
+                        <div class="card-player" data-audio-src="Vaathi_Raid(128k).mp3" id="card-play-div">
+                            <img src="./assets/music-player.png" alt="">
+                        </div>
+                    </div>
+                </div>
+
+
+                <h2>Featured Charts</h2>
+                <div class="cards-container">
+                    <div class="card">
+                        <img src="./assets/card5img.jpeg" alt="">
+                        <p class="card-title">Top 50 - Global</p>
+                        <p class="card-info">Your daily updates of the most played tracks</p>
+                        <div class="card-player">
+                            <img src="./assets/music-player.png" alt="">
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="./assets/card6img.jpeg" alt="">
+                        <p class="card-title">Top 50 - Global</p>
+                        <p class="card-info">Your daily updates of the most played tracks</p>
+                        <div class="card-player">
+                            <img src="./assets/music-player.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <br><br><br><br><br><br><br><br><br>
+            </div>
+        </div>
+        <div class="music-player">
+            <div class="music-play-details">
+                <div class="mpd-logo">
+                    <img src="./assets/RJx.png" alt="">
+                </div>
+                <div class="mpd-details">
+                    <div class="mpdd-song-name">
+                        <a href="" id="song-name">Tote Tike Chanhidele</a>
+                    </div>
+                    <div class="mpdd-singer">
+                        <a href="" id="singer-name">Raju Dash,Odisha</a>
+                    </div>
+                </div>
+                <div class="mpd-liked">
+                    <i class="fa-regular fa-heart unlike"></i>
+                    <i class="fa-solid fa-heart like"></i>
+                </div>
+            </div>
+            <div class="mp-progress">  
+                <div class="mp-control-bar">
+                    <div class="mcb-suffle ">
+                        <i class="fa-solid fa-shuffle"></i>
+                    </div>
+                    <div class="mcb-backward margin-item">
+                        <i class="fa-solid fa-backward-step"></i>
+                    </div>
+                    <div class="mcb-play margin-item">
+                        <img src="./assets/music-player.png" alt="" id="playing-resume" onclick="musicPlayStatus()" status="">
+                        <i class="fa-solid fa-pause" id="playing-pause" onclick="musicPlayStatus()" status=""></i>
+                    </div>
+                    <div class="mcb-forward margin-item">
+                        <i class="fa-solid fa-forward-step"></i>
+                    </div>
+                    <div class="mcb-repeat margin-item">
+                        <i class="fa-solid fa-repeat"></i>
+                    </div>
+                </div>
+                <div class="mp-bar">
+                    <input type="range" name="" id="" value="0">
+                </div>
+            </div>
+            <div class="music-control">
+                <div class="mc-volume-control">
+                    <div class="mvc-volume">
+                        <i class="fa-solid fa-volume-high no-mute" id="music-no-mute" onclick="musicVolumeStatus()" status=""></i>
+                        <i class="fa-solid fa-volume-xmark mute " id="music-mute" onclick="musicVolumeStatus()" status=""></i>
+                    </div>
+                    <div>
+                        <input type="range" id="volume-control" min="0" max="1" step="0.01" value=".5">
+                    </div>
+                </div>
+                <div class="mc-maximize-min">
+                    <i class="fa-solid fa-maximize"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <audio src="" id="audio-player"></audio>
+    <script>
+    //Volume-Control
+        const musicMute=document.getElementById('music-mute');
+        const musicNoMute=document.getElementById('music-no-mute');
+        const music=document.getElementById('music');
+        const volumeControl=document.getElementById('volume-control');
+        let muteMusic = window.getComputedStyle(musicMute).display;
+        let unMuteMusic=window.getComputedStyle(musicNoMute).display;
+        let soundStatusMute;
+        let soundStatusUnMute;
+        let tempVolume=0.5;
+        let volume;
+        // const controlSound=document.getElementById('control-sound');
+        function musicVolumeStatus(){   
+            if(unMuteMusic==='block'){
+                console.log("Mute");
+                unMuteMusic=musicNoMute.style.display='none'; // or 'none'
+                muteMusic=musicMute.style.display='block';
+                musicMute.setAttribute('status','yes');
+                musicNoMute.setAttribute('status','no');
+                volume = volumeControl.value;
+                soundStatusMute=musicMute.getAttribute('status');
+                soundStatusUnMute=musicNoMute.getAttribute('status');
+                // console.log(soundStatusMute,soundStatusUnMute);
+                if(soundStatusMute=="yes"){
+                    tempVolume=volumeControl.value;
+                    volumeControl.setAttribute('value','0');
+                    audioPlayer.volume=0;
+                    console.log(audioPlayer.volume);
+                }
+                else{
+                    volumeControl.setAttribute('value',tempVolume);
+                    audioPlayer.volume=tempVolume;
+                }
+            }
+            else{   
+                console.log("Unmute");
+                muteMusic=musicMute.style.display='none';
+                unMuteMusic=musicNoMute.style.display='block'; // or 'none' 
+                musicNoMute.setAttribute('status','yes'); 
+                musicMute.setAttribute('status','no');
+                volume = volumeControl.value;
+                soundStatusMute=musicMute.getAttribute('status');
+                soundStatusUnMute=musicNoMute.getAttribute('status');
+                // console.log(soundStatusMute,soundStatusUnMute);
+                if(soundStatusUnMute=="yes"){
+                    volumeControl.setAttribute('value',tempVolume);
+                    audioPlayer.volume = tempVolume;
+                    console.log(audioPlayer.volume);  
+                }
+                 else{
+                    volumeControl.setAttribute('value','0');
+                    audioPlayer.volume=0;  
+                }           
+            }
+        }
+        // const volumeDisplay = document.getElementById('volume-display');
+        volumeControl.addEventListener('input', () => {
+            volume=volumeControl.value;
+            console.log(volume); 
+            soundStatusMute=musicMute.getAttribute('status');
+            soundStatusUnMute=musicNoMute.getAttribute('status');
+            if(volume==0){
+                volumeControl.setAttribute('value','0');
+                audioPlayer.volume=0; 
+                unMuteMusic=musicNoMute.style.display='none';
+                muteMusic=musicMute.style.display='block';
+            }
+            else{
+                muteMusic=musicMute.style.display='none';
+                unMuteMusic=musicNoMute.style.display='block';
+                audioPlayer.volume = volume;
+                volumeControl.setAttribute('value',volume);
+            }
+        });
+    //Play-Control-Footer
+        const playingResume=document.getElementById('playing-resume');
+        const playingPause=document.getElementById('playing-pause');
+        function musicPlayStatus(){
+            if (playingResume) {
+                if(playingResume.style.display=='block'){
+                    playingResume.style.display = 'none';
+                    playingPause.style.display='block';
+                    playingPause.setAttribute('status','yes');
+                    playingResume.setAttribute('status','no'); 
+                    const playingStatusResume=playingResume.getAttribute('status');
+                    const playingStatusPause=playingPause.getAttribute('status');
+                    if(playingStatusResume=="yes"){
+                        //calling to playing music
+                    }
+                    else{
+                        //pause the music
+                    }
+                }
+                else{
+                    playingPause.style.display = 'none'; // or 'none'
+                    playingResume.style.display='block';
+                    playingPause.setAttribute('status','no');
+                    playingResume.setAttribute('status','yes');
+                    const playingStatusResume=playingResume.getAttribute('status');
+                    const playingStatusPause=playingPause.getAttribute('status');
+                    if(playingStatusResume=="yes"){
+                        //calling to playing music
+                    }
+                    else{
+                        //pause the music
+                    }
+                }
+            }
+            else{
+                if(playingResume.style.display=='block'){
+                    playingResume.style.display = 'none'; // or 'none'
+                    playingPause.style.display='block';
+                    playingPause.setAttribute('status','yes');
+                    playingResume.setAttribute('status','no'); 
+                    const playingStatusResume=playingResume.getAttribute('status');
+                    const playingStatusPause=playingPause.getAttribute('status');
+                    if(playingStatusResume=="yes"){
+                        //calling to playing music
+                    }
+                    else{
+                        //pause the music
+                    }
+                }
+                else{
+                    playingPause.style.display = 'none'; // or 'none'
+                    playingResume.style.display='block';
+                    playingPause.setAttribute('status','no');
+                    playingResume.setAttribute('status','yes');
+                    const playingStatusResume=playingResume.getAttribute('status');
+                    const playingStatusPause=playingPause.getAttribute('status');
+                    if(playingStatusResume=="yes"){
+                        //calling to playing music
+                    }
+                    else{
+                        //pause the music
+                    }
+                }
+            }
+        }
+
+    //Recently Played
+    const playButtons = document.querySelectorAll('.card-player');
+    const audioPlayer = document.getElementById('audio-player');
+    const cardPlayerDiv=document.getElementById('card-play-div');
+
+
+            playButtons.forEach(cardPlayerDiv => {
+                cardPlayerDiv.addEventListener('click', e => {
+                    const audioSrc = cardPlayerDiv.getAttribute('data-audio-src');
+                    console.log(audioSrc);
+                    
+                    audioPlayer.src = audioSrc;
+                    audioPlayer.play();
+                });
+            });
+    //Trending now near you
+    //Featured Charts
+    </script>
+</body>
+</html>

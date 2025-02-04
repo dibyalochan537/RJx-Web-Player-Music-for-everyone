@@ -1,4 +1,4 @@
-<script>
+
     //Load Music
         // function musicLoadIntoMusic(musicObject){
         //     // console.log(musicObject.odiaMusic[0]);
@@ -318,4 +318,3 @@
             });
     //Trending now near you
     //Featured Charts
-    </script>
